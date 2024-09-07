@@ -1,13 +1,16 @@
 public class CharacterPattern {
     public static void main(String[] args) {
-        int number = 4;
+        int number = 10;
         char ch = 'A';
-        for (int i = 1; i <= number; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(ch);
-                ch++;
+
+        for (int i = 1, charCount = 1; i <= number; i++, charCount++) {
+            System.out.print(ch);
+            ch++;
+
+            if (charCount == i) {
+                System.out.println();
+                charCount = 0;
             }
-            System.out.println();
         }
     }
 }
